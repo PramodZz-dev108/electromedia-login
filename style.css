@@ -1,0 +1,91 @@
+/* Reset and base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Cool animated background */
+.background {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(270deg, #0tybhh #1ad307, #5bf14c, #9be09b, #10eca6);
+    background-size: 600% 600%;
+    animation: backgroundSlide 10s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes backgroundSlide {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Login panel with animation */
+.login-container {
+    background: rgba(9, 179, 242, -30);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,12,0.3);
+    text-align: center;
+    width: 320px;
+    animation: fadeInUp 3s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+    color: #1e3c72;
+    font-size: 28px;
+}
+
+/* Input styles */
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.login-container input:focus {
+    border-color: #2a5298;
+    outline: none;
+}
+
+/* Button with hover effect */
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(30, 60, 114, 0.4);
+}
